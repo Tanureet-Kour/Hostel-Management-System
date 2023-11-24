@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="demo.css">
+    <title>Contact Us</title>
+</head>
+
+<body>
+    <div class="main">
+        <form action=" " method="get" onsubmit="sendEmail(); reset(); return false;">
+
+            <div id="heading">
+                <h2>Contact Us</h2>
+            </div>
+
+            <div class="name-phone">
+                <div class="input-group">
+                    <input type="text" required id="name" name="name" autocomplete="off">
+                    <label for="name"><ion-icon name="person"></ion-icon> NAME</label>
+                </div>
+
+                <div class="input-group">
+                    <input type="text" required id="number" name="number" autocomplete="off">
+                    <label for="number"><ion-icon name="phone-portrait"></ion-icon> PHONE NO.</label>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <input type="email" required id="email" name="email" autocomplete="off">
+                <label for="email"><ion-icon name="mail"></ion-icon> EMAIL ID</label>
+            </div>
+
+            <div class="input-group" id="meessage" name="message" autocomplete="off">
+                <textarea id="message" rows="8" required></textarea>
+                <label for="message"><ion-icon name="chatbubbles"></ion-icon> MESSAGE</label>
+            </div>
+
+            <button class="button" type="submit">SUBMIT</button>
+
+        </form>
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail() {
+            Email.send({
+                Host: "smtp.elasticemail.com",
+                Username: "tanureetkour@gmail.com",
+                Password: "345729DE72DB2E77E471383E35B6357A5530",
+                To: 'tanureetkour@gmail.com',
+                From: document.getElementById("email").value,
+                Subject: "New message from hostel website",
+                Body: " <br> Name: " + document.getElementById("name").value
+                    + " <br> Phone No.: " + document.getElementById("number").value
+                    + " <br> E-mail: " + document.getElementById("email").value
+                    + " <br> Message: " + document.getElementById("message").value
+            }).then(
+                message => alert("Message sent Successfully")
+            );
+        }
+    </script>
+</body>
+
+</html>

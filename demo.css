@@ -1,0 +1,117 @@
+*{
+    margin:0;
+    padding:0;
+    font-family:'poppins', sans-serif;
+    box-sizing:border-box;
+}
+/* .container{
+ border: 2px dotted white; 
+    padding: 0 25px 25px 25px;
+    background-color:#172a6e;
+    animation:animatecontainerBg 60s linear infinite;
+}
+@keyframes animateContainerBg{
+    100%{
+        filter:hue-rotate(360deg);
+    }
+} */
+.main{
+    width:100%;
+    height:100vh;
+    /* background-image:linear-gradient(rgba(0,0,0,0.8) ,  #3551b5) , url(".jpg"); */
+    background-image:linear-gradient(rgba(0,0,0,0.2) ,  #3551b5) , url("contact_us_background.jpg");
+    background-position:center;
+    background-size:cover;
+    animation:animateBg 60s linear infinite;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+@keyframes animateBg{
+    100%{
+        filter:hue-rotate(360deg);
+    }
+}
+form {
+    width: 32%;
+    height: 603px;
+    max-width: 600px;
+    /* border: 2px solid white; */
+    border-radius: 76px;
+    margin: 25px;
+    padding: 25px;
+    box-shadow: 1px 0px 8px 24px rgba(255,255,255,0.1);
+    background-color: #172a6e;
+    animation: animatecontainerBg 60s linear infinite;
+}
+@keyframes animateContainerBg{
+    100%{
+        filter:hue-rotate(360deg);
+    }
+}
+.input-group{
+    /* border:2px dotted white; */
+    margin-bottom:40px;
+    position:relative;
+}
+input,textarea{
+    width:100%;
+    padding:10px;
+    /* border-bottom:2px solid white; */
+    color:white;
+    background:transparent;
+    font-size:15px;
+    border-radius:5px;
+}
+label{
+    font-size:13px;
+    height:100%;
+    position:absolute;
+    left:0;
+    top:0;
+    padding:10px;
+    color:#f0dbdb;
+    cursor:text;
+    transition:0.5s;
+}
+button{
+    font-weight: bold;
+    font-size:15px;
+    padding:10px 0;
+    color:#fff;
+    outline:none;
+    background:transparent;
+    border:3px solid #fff;
+    border-radius:16px;
+    width:100%;
+    cursor:pointer;
+}
+ion-icon{
+    color:#fff;
+}
+input:focus~label,
+input:valid~label{
+    top:-35px;
+    font-size:12px;
+}
+textarea:focus~label,
+textarea:valid~label{
+    top:-35px;
+    font-size:12px;
+}
+h2{
+    font-size:35px;
+    text-decoration:underline;
+    color:#fff;
+    font-weight:lighter;
+    margin-bottom:39px
+}
+#heading{
+    text-align:center;
+    margin:30px;
+}
+.name-phone{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}

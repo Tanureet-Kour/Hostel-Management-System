@@ -1,0 +1,52 @@
+<!--SIGN IN FORM-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIGN UP PAGE</title>
+    <link rel="stylesheet" type="text/css" href="s_style.css">
+</head>
+
+<body>
+    <section>
+        <!-- <div class="outer-div"> -->
+            <div class="sign-box">
+                <form action="s_home.html" method="get" name="form1" onsubmit="return validate_SForm()">
+                    <h2>Sign Up</h2>
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                        <input type="email" id="email" autocomplete="off" name="email" required>
+                        <label>Email</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                        <input type="password" id="password" name="password" required>
+                        <label>Password</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                        <input type="password" id="cnf_password" name="cnf_password" required>
+                        <label>Confirm Password</label>
+                    </div>
+                    <div id="remember">
+                        <label><input type="checkbox">Remember me</label>
+                    </div>
+                    <button type="submit" value="submit">SIGN UP</button>
+                    <div class="login-link">
+                        <p>Already Registered? <a href="http://127.0.0.1:5500/LOGIN/l_index.html">Login</a></p>
+                    </div>
+                </form>
+            </div>
+        <!-- </div> -->
+    </section>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="s_script.js"></script>
+    
+</body>
+
+</html>
